@@ -1,0 +1,5 @@
+@echo off
+title NS_FINDER
+color B
+echo
+set /p ip="Enter IP Address List...: "
