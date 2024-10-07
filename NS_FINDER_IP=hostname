@@ -3,3 +3,17 @@ title NS_FINDER
 color B
 echo
 set /p ip="Enter IP Address List...: "
+
+set /a count=%ip%
+for /f %%a in (%ip%) do (
+  set pass=%%a
+  call :attempt
+
+IP's found
+pause
+exit
+
+attempt:
+set count=%ip%
+nslookup \\%ip%
+
